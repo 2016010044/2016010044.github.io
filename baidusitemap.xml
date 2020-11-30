@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://bzkco70.cn/2016/02/09/my-fairy-tale3/</loc>
+    <loc>http://bzkco70.cn/2020/11/30/git/</loc>
+    <lastmod>2020-11-30</lastmod>
+  </url>
+  <url>
+    <loc>http://bzkco70.cn/2014/05/27/safety-point-of-view-from-front-end/</loc>
+    <lastmod>2020-11-28</lastmod>
+  </url>
+  <url>
+    <loc>http://bzkco70.cn/2012/12/17/share-a-css-hack/</loc>
+    <lastmod>2020-11-28</lastmod>
+  </url>
+  <url>
+    <loc>http://bzkco70.cn/2017/07/09/prevent-spiders/</loc>
+    <lastmod>2020-11-28</lastmod>
+  </url>
+  <url>
+    <loc>http://bzkco70.cn/2014/08/14/reduce-http-requests/</loc>
     <lastmod>2020-11-28</lastmod>
   </url>
   <url>
     <loc>http://bzkco70.cn/2013/09/10/my-fairy-tale2/</loc>
+    <lastmod>2020-11-28</lastmod>
+  </url>
+  <url>
+    <loc>http://bzkco70.cn/2016/02/09/my-fairy-tale3/</loc>
+    <lastmod>2020-11-28</lastmod>
+  </url>
+  <url>
+    <loc>http://bzkco70.cn/2020/11/30/hello-world/</loc>
     <lastmod>2020-11-28</lastmod>
   </url>
 </urlset> 
