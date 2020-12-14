@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="CoolBreeze的博客">
 <meta property="og:description" content="git的功能代码回滚、代码合并、版本备份、权限控制、追究责任等。他能追踪一个项目从诞生到定案的过程、记录项目所有变化，无限制返回、查看特定版本的修情况。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-12-11T12:15:17.559Z">
+<meta property="og:updated_time" content="2020-12-14T08:13:58.365Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git详解">
 <meta name="twitter:description" content="git的功能代码回滚、代码合并、版本备份、权限控制、追究责任等。他能追踪一个项目从诞生到定案的过程、记录项目所有变化，无限制返回、查看特定版本的修情况。">
@@ -206,8 +206,8 @@
 <h2 id="共享库分类："><a href="#共享库分类：" class="headerlink" title="共享库分类："></a>共享库分类：</h2><p>远程共享库和本地共享库，远程的就比如GitHub，本地共享库的例子好比如在一个电脑上，有一个共享库，另外有两个文件目录分别在本地共享库拉取提交代码。git clone “c:/user….(本地共享库地址)”，搭建本地共享库mkdir share/cd share/git init –bare。</p>
 <h2 id="解决冲突："><a href="#解决冲突：" class="headerlink" title="解决冲突："></a>解决冲突：</h2><p>这个通常我们在使用前最好拉一下代码，否则如果本地文件的版本低于共享库的文件版本, 提交时就会报超时错误，冲突解决：如果俩人在用一个共享库的一个文件，另一个修改提交并且推送，另一个也修改提交推送时就会提升merge，这时就要合并一下代码接着点击merge，这时通常把别人的放在前面，自己的放在后面，接着apply一下，如果没有成功重新推送一下。</p>
 <h2 id="配置忽略文件："><a href="#配置忽略文件：" class="headerlink" title="配置忽略文件："></a>配置忽略文件：</h2><p>有些文件对自己有用，对别人没有，就不必上传到服务器了。<br>  就是在当前目录下，touch .gitignore  接着打开这个文件在里面写上要忽略的文件名即可。只能忽略工作区文件，如果已经在暂缓区，则无法忽略。</p>
-<h2 id="终于快要结束了，接下来就是git分支"><a href="#终于快要结束了，接下来就是git分支" class="headerlink" title="终于快要结束了，接下来就是git分支"></a>终于快要结束了，接下来就是git分支</h2><p>  首先如果远程有多个分支，如果是master分支，直接拉，如果是有其他分支，拉取代码命令为：git clone -b dev ssh地址<br>查看当前分支  git branch -a  -&gt;查看本地分支git branch -&gt;创建分支 git branch 分支名称 -&gt;将创建的分支推送都远程git push origin 分支名称 -&gt;切换分支 git checkout 分支名称 -&gt;删除分支 git branch -d 分支名称 -&gt;删除远程分支 git push origin :分支名称。<br>这里如果想将其他分支合并到master分支，首先提交当前分支的代码，接着切换到master分支，master分支如果是多人开发就要pull一下，接着就是合并 git merge dev(假设要合并dev分支的) 接着就git status 查看合并代码是否有冲突，最后git push origin master,如果想切回原来的分支继续开发就git checkout dev </p>
-<h2 id="抱歉啊，还有最后一点内容，就是打包"><a href="#抱歉啊，还有最后一点内容，就是打包" class="headerlink" title="抱歉啊，还有最后一点内容，就是打包"></a>抱歉啊，还有最后一点内容，就是打包</h2><p>  给项目打一个标签，就是打一个版本，git tag -a v1.0 -m “tag”,接着上传 git push origin v1.0</p>
+<h2 id="git分支"><a href="#git分支" class="headerlink" title="git分支"></a>git分支</h2><p>  首先如果远程有多个分支，如果是master分支，直接拉，如果是有其他分支，拉取代码命令为：git clone -b dev ssh地址<br>查看当前分支  git branch -a  -&gt;查看本地分支git branch -&gt;创建分支 git branch 分支名称 -&gt;将创建的分支推送都远程git push origin 分支名称 -&gt;切换分支 git checkout 分支名称 -&gt;删除分支 git branch -d 分支名称 -&gt;删除远程分支 git push origin :分支名称。<br>这里如果想将其他分支合并到master分支，首先提交当前分支的代码，接着切换到master分支，master分支如果是多人开发就要pull一下，接着就是合并 git merge dev(假设要合并dev分支的) 接着就git status 查看合并代码是否有冲突，最后git push origin master,如果想切回原来的分支继续开发就git checkout dev </p>
+<h2 id="git打包"><a href="#git打包" class="headerlink" title="git打包"></a>git打包</h2><p>  给项目打一个标签，就是打一个版本，git tag -a v1.0 -m “tag”,接着上传 git push origin v1.0</p>
 
       
 
@@ -341,7 +341,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#git的功能"><span class="toc-number">1.</span> <span class="toc-text">git的功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git和svn比较"><span class="toc-number">2.</span> <span class="toc-text">git和svn比较</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git的工作流程"><span class="toc-number">3.</span> <span class="toc-text">git的工作流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git的使用经验"><span class="toc-number">4.</span> <span class="toc-text">git的使用经验</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git的使用方式"><span class="toc-number">5.</span> <span class="toc-text">git的使用方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常见的unix命令"><span class="toc-number">6.</span> <span class="toc-text">常见的unix命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git工作原理："><span class="toc-number">7.</span> <span class="toc-text">git工作原理：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git本地仓库的搭建："><span class="toc-number">8.</span> <span class="toc-text">git本地仓库的搭建：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-基本使用："><span class="toc-number">9.</span> <span class="toc-text">git 基本使用：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git版本回退："><span class="toc-number">10.</span> <span class="toc-text">git版本回退：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#共享库分类："><span class="toc-number">11.</span> <span class="toc-text">共享库分类：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决冲突："><span class="toc-number">12.</span> <span class="toc-text">解决冲突：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置忽略文件："><span class="toc-number">13.</span> <span class="toc-text">配置忽略文件：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#终于快要结束了，接下来就是git分支"><span class="toc-number">14.</span> <span class="toc-text">终于快要结束了，接下来就是git分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#抱歉啊，还有最后一点内容，就是打包"><span class="toc-number">15.</span> <span class="toc-text">抱歉啊，还有最后一点内容，就是打包</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#git的功能"><span class="toc-number">1.</span> <span class="toc-text">git的功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git和svn比较"><span class="toc-number">2.</span> <span class="toc-text">git和svn比较</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git的工作流程"><span class="toc-number">3.</span> <span class="toc-text">git的工作流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git的使用经验"><span class="toc-number">4.</span> <span class="toc-text">git的使用经验</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git的使用方式"><span class="toc-number">5.</span> <span class="toc-text">git的使用方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常见的unix命令"><span class="toc-number">6.</span> <span class="toc-text">常见的unix命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git工作原理："><span class="toc-number">7.</span> <span class="toc-text">git工作原理：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git本地仓库的搭建："><span class="toc-number">8.</span> <span class="toc-text">git本地仓库的搭建：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-基本使用："><span class="toc-number">9.</span> <span class="toc-text">git 基本使用：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git版本回退："><span class="toc-number">10.</span> <span class="toc-text">git版本回退：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#共享库分类："><span class="toc-number">11.</span> <span class="toc-text">共享库分类：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决冲突："><span class="toc-number">12.</span> <span class="toc-text">解决冲突：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置忽略文件："><span class="toc-number">13.</span> <span class="toc-text">配置忽略文件：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git分支"><span class="toc-number">14.</span> <span class="toc-text">git分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git打包"><span class="toc-number">15.</span> <span class="toc-text">git打包</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -353,18 +353,40 @@
 
 
   
+    <style>
+  .valine_comment{
+  width: 94%;
+  margin: 0 auto;
+  background-color:skyblue;
+  border-radius: 10px;
+  padding: 5px;
+}
+</style>
+<div class="valine_comment"></div>
+<!--载入js，在</body>之前插入即可-->
+<!--Leancloud 操作库:-->
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<!--Valine 的核心代码库-->
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+  var notify = 'true' == true ? true : false;
+  var verify = 'false' == true ? true : false;
+  new Valine({
+      // AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
+      av: AV,
+      el: '.valine_comment',
+      emoticon_url: 'https://cloud.panjunwen.com/alu',
+      emoticon_list: ["狂汗.png","不说话.png","汗.png","坐等.png","献花.png","不高兴.png","中刀.png","害羞.png","皱眉.png","小眼睛.png","暗地观察.png"],
+      app_id: 'wUQIUA7MyXBDve1qFQCkMHtL-gzGzoHsz',
+      app_key: 'bNMaEz6aWhd6bxKjEGhYe9gm',
+      placeholder: '请留下您的想法？'
+    });
+</script>
+  
+  
   
   
 
-  
-  <div id="SOHUCS" sid="git" ></div> 
-<script type="text/javascript"> 
-(function(){ 
-var appid = "cyvcLG71E"; 
-var conf = "f4921df0e03538a6e57647f0d082892a"; 
-var width = window.innerWidth || document.documentElement.clientWidth; 
-if (width < 960) { 
-window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("//changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
   
 
   
