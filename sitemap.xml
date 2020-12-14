@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://bzkco70.cn/photos/index.html</loc>
+    
+    <lastmod>2020-12-14T03:18:35.937Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://bzkco70.cn/2020/12/11/git/</loc>
     
     <lastmod>2020-12-11T12:15:17.559Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://bzkco70.cn/photos/ins.json</loc>
     
     <lastmod>2020-11-28T08:23:01.185Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://bzkco70.cn/photos/index.html</loc>
-    
-    <lastmod>2020-11-28T08:23:01.183Z</lastmod>
     
   </url>
   
