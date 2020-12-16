@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://bzkco70.cn/2020/12/16/promise/</loc>
+    
+    <lastmod>2020-12-16T08:14:57.094Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://bzkco70.cn/2020/12/16/cross-origin/</loc>
     
     <lastmod>2020-12-16T07:26:03.560Z</lastmod>
@@ -44,14 +51,14 @@
   </url>
   
   <url>
-    <loc>http://bzkco70.cn/assets/demo/hack_demo.html</loc>
+    <loc>http://bzkco70.cn/assets/demo/jiugongge_demo.html</loc>
     
     <lastmod>2020-11-28T08:23:01.157Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://bzkco70.cn/assets/demo/jiugongge_demo.html</loc>
+    <loc>http://bzkco70.cn/assets/demo/hack_demo.html</loc>
     
     <lastmod>2020-11-28T08:23:01.157Z</lastmod>
     
