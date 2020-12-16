@@ -6,18 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://bzkco70.cn">
-  <title>Archives: 2020 | CoolBreeze的博客</title>
+  <title>cross-origin(跨域)详解 | CoolBreeze的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="web前端攻城狮">
-<meta property="og:type" content="website">
-<meta property="og:title" content="CoolBreeze的博客">
-<meta property="og:url" content="http://bzkco70.cn/archives/2020/index.html">
+  <meta name="description" content="1.什么是跨域就是非同源请求，同源即端口号、主机和协议相同。">
+<meta name="keywords" content="跨域">
+<meta property="og:type" content="article">
+<meta property="og:title" content="cross-origin(跨域)详解">
+<meta property="og:url" content="http://bzkco70.cn/2020/12/16/cross-origin/index.html">
 <meta property="og:site_name" content="CoolBreeze的博客">
-<meta property="og:description" content="web前端攻城狮">
+<meta property="og:description" content="1.什么是跨域就是非同源请求，同源即端口号、主机和协议相同。">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://bzkco70.cn/2020/12/16/assets/blogImg/bys0.jpg">
+<meta property="og:updated_time" content="2020-12-16T07:14:29.851Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CoolBreeze的博客">
-<meta name="twitter:description" content="web前端攻城狮">
+<meta name="twitter:title" content="cross-origin(跨域)详解">
+<meta name="twitter:description" content="1.什么是跨域就是非同源请求，同源即端口号、主机和协议相同。">
+<meta name="twitter:image" content="http://bzkco70.cn/2020/12/16/assets/blogImg/bys0.jpg">
   
     <link rel="alternative" href="/atom.xml" title="CoolBreeze的博客" type="application/atom+xml">
   
@@ -153,36 +157,76 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-cross-origin" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/16/cross-origin/" class="archive-article-date">
-  	<time datetime="2020-12-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-16</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/16/cross-origin/">cross-origin(跨域)详解</a>
+    <h1 class="article-title" itemprop="name">
+      cross-origin(跨域)详解
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/12/16/cross-origin/" class="archive-article-date">
+  	<time datetime="2020-12-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="../assets/blogImg/bys0.jpg" alt="这是一个老头"></p>
+<h2 id="1-什么是跨域"><a href="#1-什么是跨域" class="headerlink" title="1.什么是跨域"></a>1.什么是跨域</h2><p>就是非同源请求，同源即端口号、主机和协议相同。<br><a id="more"></a></p>
+<h2 id="2-为什么会出现："><a href="#2-为什么会出现：" class="headerlink" title="2.为什么会出现："></a>2.为什么会出现：</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">由于浏览器的同源策略限制，</span><br><span class="line"><span class="bullet">1. </span>通常浏览器允许进行跨域的写操作，如链接、重定向</span><br><span class="line"><span class="bullet">2. </span>通常浏览器允许跨域资源嵌入（Cross-origin embedding），如 img、script 标签	</span><br><span class="line"><span class="bullet">3. </span>通常浏览器不允许跨域读操作（Cross-origin reads）</span><br></pre></td></tr></table></figure>
+<h2 id="3-jsonP解决跨域"><a href="#3-jsonP解决跨域" class="headerlink" title="3.jsonP解决跨域"></a>3.jsonP解决跨域</h2><h4 id="客户端："><a href="#客户端：" class="headerlink" title="客户端："></a>客户端：</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getData</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(data);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;script src="http:/</span><span class="regexp">/localhost:3000/</span>?callback=getData<span class="string">"&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="服务器端"><a href="#服务器端" class="headerlink" title="服务器端"></a>服务器端</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">router.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`收到客户端请求了: <span class="subst">$&#123;req.url&#125;</span>`</span>);</span><br><span class="line">    <span class="keyword">var</span> _callback=req.query.callback;<span class="comment">//接收到的是一个函数</span></span><br><span class="line">    <span class="keyword">var</span> data = <span class="built_in">JSON</span>.stringify(&#123;</span><br><span class="line">      status_code: <span class="number">200</span>,</span><br><span class="line">      result: &#123;</span><br><span class="line">        name: <span class="string">'张三'</span>,</span><br><span class="line">        age: <span class="number">18</span>,</span><br><span class="line">        friends: [<span class="string">'李四'</span>, <span class="string">'王五'</span>, <span class="string">'赵六'</span>]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    res.end(_callback+<span class="string">"("</span>+data+<span class="string">")"</span>);<span class="comment">//相当于响应的是getData(data)的执行结果。</span></span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">原理：由于同源策略限制，虽然不能通过XMLhttprequest,但能引入js文件，随后触发回调，服务器将数据返回给客户端。</span><br><span class="line">优点：兼容性好，可以解决不同浏览器的跨域问题。</span><br><span class="line">缺点：只支持<span class="keyword">get</span>请求，不安全，</span><br></pre></td></tr></table></figure>
+<h2 id="4-req-query-req-params-req-body的区别："><a href="#4-req-query-req-params-req-body的区别：" class="headerlink" title="4.req.query\req.params\req.body的区别："></a>4.req.query\req.params\req.body的区别：</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>req.params:</span><br><span class="line">  所对应的url长这个样子 http:<span class="comment">//localhost:3000/10</span></span><br><span class="line">  app.get(<span class="string">"/:id"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">req.res</span>)</span>&#123;</span><br><span class="line">    res.send(req.params[<span class="string">"id"</span>]);</span><br><span class="line">  &#125;)</span><br><span class="line">  通过这样才能拿到id的值，即<span class="number">10</span>；</span><br><span class="line"><span class="number">2.</span>req.query:</span><br><span class="line">  所对应的url长这个样子http:<span class="comment">//localhost:3000/?id=10</span></span><br><span class="line">  app.get(<span class="string">"/"</span>,<span class="function"><span class="keyword">function</span> (<span class="params">req,res</span>) </span>&#123;</span><br><span class="line">      res.send(req.query[<span class="string">"id"</span>]);</span><br><span class="line">  &#125;);</span><br><span class="line"><span class="number">3.</span>req.body:</span><br><span class="line">  这个用在post请求中。通常用法：</span><br><span class="line">  app.post(<span class="string">"/login"</span>,(req,res,next)=&gt;&#123;</span><br><span class="line">    req.body.pwd;</span><br><span class="line">    req.body.name;</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="5-CORS：跨域资源共享"><a href="#5-CORS：跨域资源共享" class="headerlink" title="5.CORS：跨域资源共享"></a>5.CORS：跨域资源共享</h2><p>  主要分为简单请求和非简单请求，平时差不多用到的就是get post，所以简单请求就够了，浏览器会自动在请求头中添加 origin 字段，我们不需要操作：origin ：<a href="http://localhost:3000。在服务器端：配置Access-Control-Allow-Origin属性。指定允许的请求源域名，可以通过指定为" target="_blank" rel="noopener">http://localhost:3000。在服务器端：配置Access-Control-Allow-Origin属性。指定允许的请求源域名，可以通过指定为</a> *来指定所有域名。配置该属性的方式为：在app.js中添加如下代码：<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">app.all(<span class="string">'*'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">   <span class="comment">//  res.header("Access-Control-Allow-Origin", "http://localhost:3000");</span></span><br><span class="line">    res.header(<span class="string">"Access-Control-Allow-Origin"</span>, <span class="string">"*"</span>);<span class="comment">//*就是所有域名都能跨域</span></span><br><span class="line">    next();</span><br><span class="line">&#125;);</span><br><span class="line">app.use(<span class="string">'/'</span>, index);</span><br></pre></td></tr></table></figure></p>
+<h2 id="6-postMessage"><a href="#6-postMessage" class="headerlink" title="6.postMessage"></a>6.postMessage</h2><p>postMessage()方法允许来自不同源的脚本采用异步方式进行有限的通信，可以实现跨文本档、多窗口、跨域消息传递。<br>postMessage(data,origin)方法接受两个参数：<br>// 注意这里不是要获取iframe的dom引用，而是iframe window的引用<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> iframe = <span class="built_in">document</span>.getElementById(<span class="string">'iframe'</span>);</span><br><span class="line">iframe.contentWindow.postMessage(<span class="built_in">JSON</span>.stringify(data), <span class="string">'http://10.73.154.73:8088'</span>);</span><br><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'message'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">  alert(<span class="string">'data from domain2 sss ---&gt; '</span> + e.data);</span><br><span class="line">  &#125;, <span class="literal">false</span>)</span><br></pre></td></tr></table></figure></p>
+<h2 id="7-vue常用的跨域方法："><a href="#7-vue常用的跨域方法：" class="headerlink" title="7.vue常用的跨域方法："></a>7.vue常用的跨域方法：</h2><p>在根目录下创建vue.config.js文件,内容参考如下：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  publicPath: <span class="string">'/'</span>,</span><br><span class="line">  devServer: &#123;</span><br><span class="line">    proxy: &#123;</span><br><span class="line">      <span class="string">'/api'</span>: &#123;</span><br><span class="line">        target: <span class="string">'http://demo.itlike.com/web/xlmc'</span>,</span><br><span class="line">        changeOrigin: <span class="literal">true</span>,</span><br><span class="line">        pathRewrite: &#123;</span><br><span class="line">          <span class="string">'^/api'</span>: <span class="string">''</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="comment">//上面的pathRewrite就是遇到第二哥/api的时候替换为空，</span></span><br><span class="line">      <span class="string">'/pay'</span>: &#123;</span><br><span class="line">        target: <span class="string">'http://47.98.157.152/WXPayProject/pay'</span>,</span><br><span class="line">        changeOrigin: <span class="literal">true</span>,</span><br><span class="line">        pathRewrite: &#123;</span><br><span class="line">          <span class="string">'^/pay'</span>: <span class="string">''</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h2 id="8-react常用跨域方法："><a href="#8-react常用跨域方法：" class="headerlink" title="8.react常用跨域方法："></a>8.react常用跨域方法：</h2><p>在src目录下创建setupProxy.js,内容如下：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; createProxyMiddleware &#125; = <span class="built_in">require</span>(<span class="string">'http-proxy-middleware'</span>);</span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span> (<span class="params">app</span>) </span>&#123;</span><br><span class="line">  app.use(</span><br><span class="line">    <span class="string">'/api'</span>,</span><br><span class="line">    createProxyMiddleware(&#123;</span><br><span class="line">      target: <span class="string">'http://localhost:3001'</span>,</span><br><span class="line">      changeOrigin: <span class="literal">true</span>,</span><br><span class="line">    &#125;)</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/payImg/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/payImg/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -194,57 +238,148 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAAByUlEQVR42u3a0QqDMAxAUf//px3saSCtN4mNHdw+yXTm1IfQJj0OPM7vuP7y+/voevS2+TOlIVeu3DL3nI55+FFgMo3r9dwgV67cfu48eRFW9F/8c8iVK3dnbvRuLsHJlSv3v7ijBJTbxsiVK3d/Ltn8kM1J9G0L92py5cotcCtJ56nrhfVduXLlBrlncPDiKaGEo8uVK7eFS0oePJ2RxiovrQ7fJleu3MXcaJj589FUyBuucuXK7eTOw5ClCbnLyygoscqVK7edW2mU8ulVjnzJlSt3NTdX8iDbpOgWCH0yuXLltnB5KZMEyy2JcsssuXLlruYSHD+SRUI+cLRCrly5y7hkyZJLVbxNGyinypUrt5FbOS7Jg/EocuXK3Y3LW548TDTBDdOrXLlyW7j1dgj/L2mioAWWXLlyF3PrByNybRVSNJErV+673KdaIyuKpHLlyn2LywdfxPDtU2AacuXKbeFW+pv1gxR8I/RAO1auXLlBLkleuYJI7qDGzYTlypXbyI0uXHLbm2iBNXBbrly5L3Fz6yOeIlEsuXLlbs/lCxdeQLmxyZUrt5HLj0zxaUQPaKKPIleu3BZuvWBaacPw9oxcuXJbuB+i78gvA/nYHQAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/11/git/" class="archive-article-date">
-  	<time datetime="2020-12-10T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-11</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/12/11/git/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">git详解</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/11/git/">git详解</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-什么是跨域"><span class="toc-number">1.</span> <span class="toc-text">1.什么是跨域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-为什么会出现："><span class="toc-number">2.</span> <span class="toc-text">2.为什么会出现：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-jsonP解决跨域"><span class="toc-number">3.</span> <span class="toc-text">3.jsonP解决跨域</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#客户端："><span class="toc-number">3.0.1.</span> <span class="toc-text">客户端：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#服务器端"><span class="toc-number">3.0.2.</span> <span class="toc-text">服务器端</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-req-query-req-params-req-body的区别："><span class="toc-number">4.</span> <span class="toc-text">4.req.query\req.params\req.body的区别：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-CORS：跨域资源共享"><span class="toc-number">5.</span> <span class="toc-text">5.CORS：跨域资源共享</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-postMessage"><span class="toc-number">6.</span> <span class="toc-text">6.postMessage</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-vue常用的跨域方法："><span class="toc-number">7.</span> <span class="toc-text">7.vue常用的跨域方法：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-react常用跨域方法："><span class="toc-number">8.</span> <span class="toc-text">8.react常用跨域方法：</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
+  
+    <style>
+  .valine_comment{
+  width: 94%;
+  margin: 0 auto;
+  background-color:skyblue;
+  border-radius: 10px;
+  padding: 10px;
+}
+</style>
+<div class="valine_comment"></div>
+<!--载入js，在</body>之前插入即可-->
+<!--Leancloud 操作库:-->
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<!--Valine 的核心代码库-->
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+  var notify = 'true' == true ? true : false;
+  var verify = 'false' == true ? true : false;
+  new Valine({
+      // AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
+      av: AV,
+      el: '.valine_comment',
+      emoticon_url: 'https://cloud.panjunwen.com/alu',
+      emoticon_list: ["狂汗.png","不说话.png","汗.png","坐等.png","献花.png","不高兴.png","中刀.png","害羞.png","皱眉.png","小眼睛.png","暗地观察.png"],
+      app_id: 'wUQIUA7MyXBDve1qFQCkMHtL-gzGzoHsz',
+      app_key: 'bNMaEz6aWhd6bxKjEGhYe9gm',
+      placeholder: '请留下您的想法？'
+    });
+</script>
   
   
-    </div></section>
+  
   
 
-    
+  
+
+  
 
 
           </div>
@@ -267,8 +402,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
