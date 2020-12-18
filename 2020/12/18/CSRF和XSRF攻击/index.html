@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://bzkco70.cn">
-  <title>Tag: MVVM | CoolBreeze的博客</title>
+  <title>CSRF和XSRF | CoolBreeze的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="web前端攻城狮">
-<meta property="og:type" content="website">
-<meta property="og:title" content="CoolBreeze的博客">
-<meta property="og:url" content="http://bzkco70.cn/tags/MVVM/index.html">
+  <meta name="description" content="CSRF和XSRF攻击">
+<meta name="keywords" content="CSRF、XSRF">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSRF和XSRF">
+<meta property="og:url" content="http://bzkco70.cn/2020/12/18/CSRF和XSRF攻击/index.html">
 <meta property="og:site_name" content="CoolBreeze的博客">
-<meta property="og:description" content="web前端攻城狮">
+<meta property="og:description" content="CSRF和XSRF攻击">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-12-18T03:21:51.284Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CoolBreeze的博客">
-<meta name="twitter:description" content="web前端攻城狮">
+<meta name="twitter:title" content="CSRF和XSRF">
+<meta name="twitter:description" content="CSRF和XSRF攻击">
   
     <link rel="alternative" href="/atom.xml" title="CoolBreeze的博客" type="application/atom+xml">
   
@@ -148,60 +150,218 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-CSRF和XSRF攻击" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/18/MVVM/" class="archive-article-date">
-  	<time datetime="2020-12-17T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-18</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/18/MVVM/">MVVM详解</a>
+    <h1 class="article-title" itemprop="name">
+      CSRF和XSRF
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/12/18/CSRF和XSRF攻击/" class="archive-article-date">
+  	<time datetime="2020-12-17T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="CSRF和XSRF攻击"><a href="#CSRF和XSRF攻击" class="headerlink" title="CSRF和XSRF攻击"></a>CSRF和XSRF攻击</h2>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/payImg/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/payImg/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">MVVM</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">CSRF、XSRF</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACL0lEQVR42u3ay27DIBQFwPz/T6dSV5VSO+eAm8owrKrIMUwW9L4ej3g9v9frJz/X+beOnnz9/OhtFywMDIzbMp6n6/zV54fLj3W+7/nZMDAw9mEk12UCSLZPDp2fDQMDAyMJBNsAMX8GAwMDY+bCzdPUPOnFwMDAOGeMBW3n6WuSsv5DLo6BgXFDRtsY+OTff9jfwMDAuAnjObTGmp0zO745DwYGxtKMJPnMA7uZxHimSYCBgbE2oz3QZ2bT8pLcL/83MDAwlmO0hfi23DZfwstbCBgYGPswkjJ928gcS2Lrax0DA2NRRg7Iee0zbcPgTVCIgYGxHOOqElgeOF41BFYksRgYGDdnFNdZcLhrS3VFsIiBgbE0I780rwoE29JeHRpiYGAsysgHvPKSWd4qyBufY6EnBgbGeoyZ8C4PHKNQr0ywMTAwdmC0hbYxdjvAke+LgYGxKiOJE5MQML+IW2QULGJgYCzNyIv+ObINN9vk9s0PgYGBsSgjbxOOtRjzwlyb0GJgYOzGGGsrtuWztlVZJMYYGBgbMNqCfn7QnNqSMDAw9mHkAxZ5OyEf7WrT5sFOLAYGxm0Zz3LN3G9tqlwEiBgYGEsz2gsuH8sYCw3zNwxe1hgYGLdlzIxTzBTvxspwh+/BwMDYgDF2yY4NWMwnrofTIhgYGBjlKEY7SJEX7zAwMDDmi2X5ty4rqGFgYGzAyFuP7RHnB1UxMDAw5i/ldrP8R2mbChgYGMsxvgBjOkupWBJMygAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/12/18/MVVM/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MVVM详解</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#CSRF和XSRF攻击"><span class="toc-number">1.</span> <span class="toc-text">CSRF和XSRF攻击</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+    <style>
+  .valine_comment{
+  width: 94%;
+  margin: 0 auto;
+  background-color:skyblue;
+  border-radius: 10px;
+  padding: 10px;
+}
+</style>
+<div class="valine_comment"></div>
+<!--载入js，在</body>之前插入即可-->
+<!--Leancloud 操作库:-->
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<!--Valine 的核心代码库-->
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+  var notify = 'true' == true ? true : false;
+  var verify = 'false' == true ? true : false;
+  new Valine({
+      // AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
+      av: AV,
+      el: '.valine_comment',
+      emoticon_url: 'https://cloud.panjunwen.com/alu',
+      emoticon_list: ["狂汗.png","不说话.png","汗.png","坐等.png","献花.png","不高兴.png","中刀.png","害羞.png","皱眉.png","小眼睛.png","暗地观察.png"],
+      app_id: 'wUQIUA7MyXBDve1qFQCkMHtL-gzGzoHsz',
+      app_key: 'bNMaEz6aWhd6bxKjEGhYe9gm',
+      placeholder: '请留下您的想法？'
+    });
+</script>
+  
+  
+  
   
 
-    
+  
+
+  
 
 
           </div>
@@ -224,9 +384,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,

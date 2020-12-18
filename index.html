@@ -150,6 +150,79 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-CSRF和XSRF攻击" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/18/CSRF和XSRF攻击/">CSRF和XSRF</a>
+    </h1>
+  
+
+        
+        <a href="/2020/12/18/CSRF和XSRF攻击/" class="archive-article-date">
+  	<time datetime="2020-12-17T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="CSRF和XSRF攻击"><a href="#CSRF和XSRF攻击" class="headerlink" title="CSRF和XSRF攻击"></a>CSRF和XSRF攻击</h2>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">CSRF、XSRF</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/12/18/CSRF和XSRF攻击/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-MVVM" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -392,7 +465,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">"fs"</span>)</span><br><span class="line">fs.readFile(__dirname + <span class="string">'/data/a.txt'</span>, (err, data) =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(data.toString());</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">fs.readFile(__dirname + <span class="string">'/data/b.txt'</span>, (err, data) =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(data.toString());</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+        <h2 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">"fs"</span>)</span><br><span class="line">fs.readFile(__dirname + <span class="string">'/data/a.txt'</span>, (err, data) =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(data.toString());</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">fs.readFile(__dirname + <span class="string">'/data/b.txt'</span>, (err, data) =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(data.toString());</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
         
       
 
@@ -466,7 +539,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="git的功能"><a href="#git的功能" class="headerlink" title="git的功能"></a>git的功能</h2><p>代码回滚、代码合并、版本备份、权限控制、追究责任等。<br>他能追踪一个项目从诞生到定案的过程、记录项目所有变化，无限制返回、查看特定版本的修情况。<br>
+        <h2 id="1-git的功能"><a href="#1-git的功能" class="headerlink" title="1.git的功能"></a>1.git的功能</h2><p>代码回滚、代码合并、版本备份、权限控制、追究责任等。<br>他能追踪一个项目从诞生到定案的过程、记录项目所有变化，无限制返回、查看特定版本的修情况。<br>
         
       
 
@@ -605,11 +678,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">MVVM</a>
+                <a href="javascript:void(0)" class="js-tag color5">CSRF、XSRF</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">跨域</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">MVVM</a>
               </li>
              
               <li class="article-tag-list-item">
