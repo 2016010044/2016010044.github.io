@@ -6,20 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://bzkco70.cn">
-  <title>MVVM详解 | CoolBreeze的博客</title>
+  <title>CSRF和XSRF | CoolBreeze的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我啊是MVVM">
-<meta name="keywords" content="MVVM">
+  <meta name="description" content="1.CSRF攻击CSRF（Cross-site request forgery）跨站请求伪造，也被称为“One Click Attack”或者Session Riding，通常缩写为CSRF或者XSRF，是一种对网站的恶意利用。">
+<meta name="keywords" content="CSRF、XSRF">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MVVM详解">
-<meta property="og:url" content="http://bzkco70.cn/2020/12/18/MVVM/index.html">
+<meta property="og:title" content="CSRF和XSRF">
+<meta property="og:url" content="http://bzkco70.cn/2020/12/19/CSRF和XSRF攻击/index.html">
 <meta property="og:site_name" content="CoolBreeze的博客">
-<meta property="og:description" content="我啊是MVVM">
+<meta property="og:description" content="1.CSRF攻击CSRF（Cross-site request forgery）跨站请求伪造，也被称为“One Click Attack”或者Session Riding，通常缩写为CSRF或者XSRF，是一种对网站的恶意利用。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-12-18T02:53:44.454Z">
+<meta property="og:image" content="http://bzkco70.cn/assets/blogImg/CSRF.png">
+<meta property="og:image" content="http://bzkco70.cn/assets/blogImg/xxs.png">
+<meta property="og:updated_time" content="2020-12-19T01:58:48.871Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MVVM详解">
-<meta name="twitter:description" content="我啊是MVVM">
+<meta name="twitter:title" content="CSRF和XSRF">
+<meta name="twitter:description" content="1.CSRF攻击CSRF（Cross-site request forgery）跨站请求伪造，也被称为“One Click Attack”或者Session Riding，通常缩写为CSRF或者XSRF，是一种对网站的恶意利用。">
+<meta name="twitter:image" content="http://bzkco70.cn/assets/blogImg/CSRF.png">
   
     <link rel="alternative" href="/atom.xml" title="CoolBreeze的博客" type="application/atom+xml">
   
@@ -150,27 +153,29 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-MVVM" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-CSRF和XSRF攻击" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      MVVM详解
+      CSRF和XSRF
     </h1>
   
 
         
-        <a href="/2020/12/18/MVVM/" class="archive-article-date">
-  	<time datetime="2020-12-17T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-18</time>
+        <a href="/2020/12/19/CSRF和XSRF攻击/" class="archive-article-date">
+  	<time datetime="2020-12-18T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="我啊是MVVM"><a href="#我啊是MVVM" class="headerlink" title="我啊是MVVM"></a>我啊是MVVM</h2>
+        <h2 id="1-CSRF攻击"><a href="#1-CSRF攻击" class="headerlink" title="1.CSRF攻击"></a>1.CSRF攻击</h2><p>CSRF（Cross-site request forgery）跨站请求伪造，也被称为“One Click Attack”或者Session Riding，通常缩写为CSRF或者XSRF，是一种对网站的恶意利用。<br><a id="more"></a><br><img src="../../../../../assets/blogImg/CSRF.png" alt="CSRF"></p>
+<h2 id="2-XXS攻击"><a href="#2-XXS攻击" class="headerlink" title="2.XXS攻击"></a>2.XXS攻击</h2><p>Cross-Site Scripting（跨站脚本攻击）简称 XSS，是一种代码注入攻击。攻击者通过在目标网站上注入恶意脚本，使之在用户的浏览器上运行。利用这些恶意脚本，攻击者可获取用户的敏感信息如 Cookie、SessionID 等，进而危害数据安全。为了和 CSS 区分，这里把攻击的第一个字母改成了 X，于是叫做 XSS。<br>XSS 的本质是：恶意代码未经过滤，与网站正常的代码混在一起；浏览器无法分辨哪些脚本是可信的，导致恶意脚本被执行。而由于直接在用户的终端执行，恶意代码能够直接获取用户的信息，或者利用这些信息冒充用户向网站发起攻击者定义的请求。<br><img src="../../../../../assets/blogImg/xxs.png" alt="CSRF"></p>
+
       
 
       
@@ -214,7 +219,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">MVVM</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">CSRF、XSRF</a>
         		</li>
       		
 		</ul>
@@ -270,7 +275,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABz0lEQVR42u3aS4rEMBAE0b7/pXtgVgM9siOVduGG8Mr4p6eNUGX59cLH+/dYnf+9snrr8/rq7gWHXLlya+778DjmEgo/PzbIlSt3nksWr88nj4dcfZ88s7wuV67ch3HTIcn05MqV++1ccoVsg+TKlfstXFL8NIsXn/xltZpcuXILbh+Y9uej+a5cuXKLrgRf1PaWnnh0uXLljnD5NmUvQk0jErTMyZUr92Zu31Llv1mkkcpyCZMrV+4glwcZfLCT4dOWjFy5cke4x6+lUeZezEoWwRe/LVeu3JrbUNJNDGm0nIwrV67cQe5eRMKDDxKkBt1guXLljnDJR3lQwr92WZNVrly5l3JJWJkGHATHY5R/vixXrtwRbtMa4aVLH6/IlSt3httvR9Iljy+UJ50fuXLl3sblDY+ripy0mbr5z4hcuXILLi9L0hYLj2N47iFXrtxJLi9++DN8+xJMTK5cuYPcNLxISxcyATQNuXLljnCbziY556VOeleuXLl3c/nixeMM3pRNQ1W5cuVOcvf+gErLm72ySq5cuU/m8k+njdVgXLly5T6S2zRfmwJJrly589w0JOVxZ1MCVbGIXLlyC+5eYNpsjJqIVq5cuTdzfwAURAYc7tMMrgAAAABJRU5ErkJggg==" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLklEQVR42u3aS27DMAwFwNz/0i7QVYvA6iPpFLA8WgWOG2u8YMXP6xWv43utr6z/6vix3u95v/P1iYWBgXFbxrFc659Orufgs+eu94aBgfEcRnUrybf5qgZfDAwMjPXBLrleDb5n92BgYGDMfzpJU3MwBgYGxppRPbTNy3C9gH5BLo6BgXFDRrUx8J+fP9jfwMDAuAnjaK3qoS0PoM39YGBgbM1Iks/e4EUvMe41CTAwMPZm5BvKW5jz82lekvv1fwMDA2NTRrUNOTka5iE1fykYGBjPZKxTzWqJf5LEll8iBgbGpozq1qvNzmrKmie6GBgYz2H0SmB5ipsPXkyOmxgYGM9hTDbdK8NVD5EYGBhPZuSp7LyIlofX6n4wMDB2ZeSNyfwxSQguz4Osj60YGBhbM0blreKYxSQZxsDAwCjcFA915bDq+MUfv4yBgbEdI29b5i3MarMzGvla34OBgbE1o9d0TBLapAHZS4zLM24YGBhbMPI24RGs/M6knFcut2FgYGzNmIx5TcYy8lT2giwcAwPj5oxeA/LaZkCVhIGB8RxGXrKvFver3/aSZwwMjL0ZR3FVA2vv0JmU3qIWJgYGxhaM+QhF/rCrRsFG4yAYGBi3ZfQGIyZhcVKGKw+HYWBgbMToBdnegMU8cT2dFsHAwMCIS3K9QYreYAcGBgbGfDDi2mNllGdjYGBsyshbj9VRjF7wHY1WYGBgbMfoBeXJ2ET+mqpNBQwMjO0YX+5lIuBcNeoBAAAAAElFTkSuQmCC" alt="微信分享二维码">
     </div>
 </div>
 
@@ -284,18 +289,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/12/18/CSRF和XSRF攻击/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          CSRF和XSRF
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/12/18/三大请求总结/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">ajax、fetch、axios详解</div>
+    <a href="/2020/12/19/MVVM/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MVVM详解</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -322,7 +318,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#我啊是MVVM"><span class="toc-number">1.</span> <span class="toc-text">我啊是MVVM</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-CSRF攻击"><span class="toc-number">1.</span> <span class="toc-text">1.CSRF攻击</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-XXS攻击"><span class="toc-number">2.</span> <span class="toc-text">2.XXS攻击</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -459,11 +455,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">跨域</a>
+                <a href="javascript:void(0)" class="js-tag color5">MVVM</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">MVVM</a>
+                <a href="javascript:void(0)" class="js-tag color3">跨域</a>
               </li>
              
               <li class="article-tag-list-item">

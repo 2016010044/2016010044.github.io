@@ -6,20 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://bzkco70.cn">
-  <title>CSRF和XSRF | CoolBreeze的博客</title>
+  <title>MVVM详解 | CoolBreeze的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="CSRF和XSRF攻击">
-<meta name="keywords" content="CSRF、XSRF">
+  <meta name="keywords" content="MVVM">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSRF和XSRF">
-<meta property="og:url" content="http://bzkco70.cn/2020/12/18/CSRF和XSRF攻击/index.html">
+<meta property="og:title" content="MVVM详解">
+<meta property="og:url" content="http://bzkco70.cn/2020/12/19/MVVM/index.html">
 <meta property="og:site_name" content="CoolBreeze的博客">
-<meta property="og:description" content="CSRF和XSRF攻击">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-12-18T03:21:51.284Z">
+<meta property="og:image" content="http://bzkco70.cn/assets/blogImg/MVVM.png">
+<meta property="og:updated_time" content="2020-12-19T01:48:32.681Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSRF和XSRF">
-<meta name="twitter:description" content="CSRF和XSRF攻击">
+<meta name="twitter:title" content="MVVM详解">
+<meta name="twitter:image" content="http://bzkco70.cn/assets/blogImg/MVVM.png">
   
     <link rel="alternative" href="/atom.xml" title="CoolBreeze的博客" type="application/atom+xml">
   
@@ -150,27 +149,28 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-CSRF和XSRF攻击" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-MVVM" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      CSRF和XSRF
+      MVVM详解
     </h1>
   
 
         
-        <a href="/2020/12/18/CSRF和XSRF攻击/" class="archive-article-date">
-  	<time datetime="2020-12-17T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-18</time>
+        <a href="/2020/12/19/MVVM/" class="archive-article-date">
+  	<time datetime="2020-12-18T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="CSRF和XSRF攻击"><a href="#CSRF和XSRF攻击" class="headerlink" title="CSRF和XSRF攻击"></a>CSRF和XSRF攻击</h2>
+        <p><img src="../../../../../assets/blogImg/MVVM.png" alt="这是一个老头"><br><a id="more"></a><br>ViewModel 层，它就像是一个中转站，负责转换 Model 中的数据对象，该层向上与视图层进行双向数据绑定，向下与 Model 层通过接口请求进行数据交互，起呈上启下作用。<br>View 层展现的不是 Model 层的数据，而是 ViewModel 的数据，由 ViewModel 负责与 Model 层交互，这就完全解耦了 View 层和 Model 层。</p>
+
       
 
       
@@ -214,7 +214,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">CSRF、XSRF</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">MVVM</a>
         		</li>
       		
 		</ul>
@@ -270,7 +270,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACL0lEQVR42u3ay27DIBQFwPz/T6dSV5VSO+eAm8owrKrIMUwW9L4ej3g9v9frJz/X+beOnnz9/OhtFywMDIzbMp6n6/zV54fLj3W+7/nZMDAw9mEk12UCSLZPDp2fDQMDAyMJBNsAMX8GAwMDY+bCzdPUPOnFwMDAOGeMBW3n6WuSsv5DLo6BgXFDRtsY+OTff9jfwMDAuAnjObTGmp0zO745DwYGxtKMJPnMA7uZxHimSYCBgbE2oz3QZ2bT8pLcL/83MDAwlmO0hfi23DZfwstbCBgYGPswkjJ928gcS2Lrax0DA2NRRg7Iee0zbcPgTVCIgYGxHOOqElgeOF41BFYksRgYGDdnFNdZcLhrS3VFsIiBgbE0I780rwoE29JeHRpiYGAsysgHvPKSWd4qyBufY6EnBgbGeoyZ8C4PHKNQr0ywMTAwdmC0hbYxdjvAke+LgYGxKiOJE5MQML+IW2QULGJgYCzNyIv+ObINN9vk9s0PgYGBsSgjbxOOtRjzwlyb0GJgYOzGGGsrtuWztlVZJMYYGBgbMNqCfn7QnNqSMDAw9mHkAxZ5OyEf7WrT5sFOLAYGxm0Zz3LN3G9tqlwEiBgYGEsz2gsuH8sYCw3zNwxe1hgYGLdlzIxTzBTvxspwh+/BwMDYgDF2yY4NWMwnrofTIhgYGBjlKEY7SJEX7zAwMDDmi2X5ty4rqGFgYGzAyFuP7RHnB1UxMDAw5i/ldrP8R2mbChgYGMsxvgBjOkupWBJMygAAAABJRU5ErkJggg==" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABxklEQVR42u3aMY7DMAwEwPz/0742QBDfLmUrLkaVESvWqCEoiq9XPI638f7L5/Pnv5KvXTxwcXGXucfpOF8gXzL//rc5uLi4+7nnYSgPYTliGApxcXEfyT0PT+dfviBJwsXFfTC3TYPOZ+Li4j6T26YgswPM1rMaLi7uAjcvatz3fEt9FxcXd8Q9ypGUP/K39eq4uLhbuHlAadH5/HpdXFzcLdw23MzaLGaB7+uWcHFxN3KTxqmVssUtTRi4uLiXcvNQkqcmK0HqnxVxcXG3cGdtELNCSXIlk1zY4OLi3s3NA0pe8sgPS3XbBy4u7hbuSntlW8hI0pekgIKLi7uTO4O2ZZQZERcX91fcWbFjpWmjLaHi4uLu584QsxaK/AImiri4uLg3cJPPtWlNntzUq+Di4m7n5vT8INRuLLpkxcXF3cJdL5LmicsFWRguLu5t3KMcbQtXW1iJ9oGLi3sztw0ubThbb7MYbgYXF3eZuxK82qvZPJANEx1cXNxLubMmjFn5oz38fC2L4OLiPobbzjmfn7du4OLiPp/bFkxXWi4uCGS4uLgjblvgaNs027f1nTAuLu6l3Da4rGymbdFYqu/i4uJOuH/SwthXcIiKIgAAAABJRU5ErkJggg==" alt="微信分享二维码">
     </div>
 </div>
 
@@ -284,9 +284,18 @@
   
 <nav id="article-nav">
   
+    <a href="/2020/12/19/CSRF和XSRF攻击/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          CSRF和XSRF
+        
+      </div>
+    </a>
   
-    <a href="/2020/12/18/MVVM/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">MVVM详解</div>
+  
+    <a href="/2020/12/18/三大请求总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ajax、fetch、axios详解</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -313,7 +322,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#CSRF和XSRF攻击"><span class="toc-number">1.</span> <span class="toc-text">CSRF和XSRF攻击</span></a></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
@@ -450,11 +459,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">跨域</a>
+                <a href="javascript:void(0)" class="js-tag color5">MVVM</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">MVVM</a>
+                <a href="javascript:void(0)" class="js-tag color3">跨域</a>
               </li>
              
               <li class="article-tag-list-item">
