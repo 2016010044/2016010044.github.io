@@ -173,7 +173,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-CSRF攻击"><a href="#1-CSRF攻击" class="headerlink" title="1.CSRF攻击"></a>1.CSRF攻击</h2><p>CSRF（Cross-site request forgery）跨站请求伪造，也被称为“One Click Attack”或者Session Riding，通常缩写为CSRF或者XSRF，是一种对网站的恶意利用。<br><a id="more"></a><br><img src="../../../../../assets/blogImg/CSRF.png" alt="CSRF"></p>
+        <h2 id="1-CSRF攻击"><a href="#1-CSRF攻击" class="headerlink" title="1.CSRF攻击"></a>1.CSRF攻击</h2><p>CSRF（Cross-site request forgery）跨站请求伪造，也被称为“One Click Attack”或者Session Riding，通常缩写为CSRF或者XSRF，是一种对网站的恶意利用。</p>
+<a id="more"></a>
+<p><img src="../../../../../assets/blogImg/CSRF.png" alt="CSRF"></p>
 <h2 id="2-XXS攻击"><a href="#2-XXS攻击" class="headerlink" title="2.XXS攻击"></a>2.XXS攻击</h2><p>Cross-Site Scripting（跨站脚本攻击）简称 XSS，是一种代码注入攻击。攻击者通过在目标网站上注入恶意脚本，使之在用户的浏览器上运行。利用这些恶意脚本，攻击者可获取用户的敏感信息如 Cookie、SessionID 等，进而危害数据安全。为了和 CSS 区分，这里把攻击的第一个字母改成了 X，于是叫做 XSS。<br>XSS 的本质是：恶意代码未经过滤，与网站正常的代码混在一起；浏览器无法分辨哪些脚本是可信的，导致恶意脚本被执行。而由于直接在用户的终端执行，恶意代码能够直接获取用户的信息，或者利用这些信息冒充用户向网站发起攻击者定义的请求。<br><img src="../../../../../assets/blogImg/xxs.png" alt="XXS"></p>
 
       
@@ -289,18 +291,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/12/19/MVVM/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          MVVM详解
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/12/18/三大请求总结/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">ajax、fetch、axios详解</div>
+    <a href="/2020/12/19/MVVM/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MVVM详解</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -460,7 +453,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">跨域</a>
+                <a href="javascript:void(0)" class="js-tag color5">CSRF、XSRF</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -468,7 +461,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CSRF、XSRF</a>
+                <a href="javascript:void(0)" class="js-tag color3">跨域</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -477,6 +470,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">promise</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
              
               <li class="article-tag-list-item">
